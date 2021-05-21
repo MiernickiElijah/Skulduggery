@@ -20,12 +20,17 @@ footer {
     font-size: larger;
     color: ivory;
 }
-.column {
-    text-align: end;
-    margin-right: auto;
-    
-    
+.is-auto {
+    text-align: center;
+    word-spacing: 15px;
 }
+
+.is-one-half {
+    text-align: center;
+    font-family: 'Press Start 2P';
+}
+    
+
 
 .name {
     text-align: center;
