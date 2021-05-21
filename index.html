@@ -2,105 +2,256 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/stylesheet.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/stylesheet.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <title>Skulduggery Character Generator</title>
+  <title>Skulduggery Character Generator</title>
 </head>
 
 <body>
-    <header>
-        <h1>Dungeons & Dragons Charactor Generator</h1>
-    </header>
+  <header>
+    <h1>Dungeons & Dragons Charactor Generator</h1>
+  </header>
 
-    <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
-            <div class="tile">
-                <div class="tile is-parent is-vertical">
-                    <article class="tile is-child notification is-primary">
-                        <p class="title">Selectors</p>
-                        <p class="subtitle">Put dropdown buttons here</p>
-                    </article>
-
-                </div>
-                <div class="tile is-parent">
-                    <article class="tile is-child notification is-info">
-                        <p class="title">Charactor Generation</p>
-
-                        <figure>
-                            <img src="./assets/Tiefling_5e_Dungeons_and_Dragons_medium.jpg">
-                        </figure>
-                    </article>
-                </div>
-
-            </div>
-            <div class="tile is-parent">
-                <article class="tile is-child notification is-danger">
-                    <p class="title name">Name Generator</p>
-                    <p class="subtitle name">Other cool things we want to add</p>
-                    <div class="content">
-                        <!-- Content -->
-                    </div>
-                </article>
-            </div>
-        </div>
-
+  <div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+      <div class="tile">
         <div class="tile is-parent is-vertical">
-            <article class="title is child notification is-primary">
-                <p class="title">Subclass and Features</p>
-                <p class="subtitle">blah blah</p>
-                <div class="content">
-                    <!-- Content-->
-
+          <article class="tile is-child notification is-primary">
+            <p class="title">Selectors</p>
+            <div class="dropdown" id="dropdown1">
+              <div class="dropdown-trigger">
+                <button onclick="javascript:document.querySelector('#dropdown1').classList.toggle('is-active')"
+                  class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                  <span>Class</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    Barbarian
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Bard
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Cleric
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Druid
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Fighter
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Monk
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Paladin
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Ranger
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Rogue
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Sorcerer
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Warlock
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Wizard
+                  </a>
                 </div>
-            </article>
-            <article class="title is child notification is-primary">
-                <p class="title">Description and Equipment</p>
-                <p class="subtitle">blah blah</p>
-                <div class="content">
-                    <!-- Content-->
-
+              </div>
+            </div>
+  
+            <div class="dropdown" id="dropdown2">
+              <div class="dropdown-trigger">
+                <button onclick="javascript:document.querySelector('#dropdown2').classList.toggle('is-active')"
+                  class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                  <span>Race</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    Dragonborn
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Dwarf
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Elf
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Gnome
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Half-Elf
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Halfling
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Half-Orc
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Human
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Tiefling
+                  </a>
                 </div>
-            </article>
-            <article class="title is child notification is-primary">
-                <p class="title">Personality Traits</p>
-                <p class="subtitle">blah blah</p>
-                <div class="content">
-
+              </div>
+            </div>
+  
+            <div class="dropdown" id="dropdown3">
+              <div class="dropdown-trigger">
+                <button onclick="javascript:document.querySelector('#dropdown3').classList.toggle('is-active')"
+                  class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                  <span>Background</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                <div class="dropdown-content">
+                  <a href="#" class="dropdown-item">
+                    Acolyte
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Charlatan
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Criminal/Spy
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Entertainer
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Folk Hero
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Gladiator
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Guild Artisan
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Hermit
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Noble
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Outlander
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Sage
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Sailor
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Soldier
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    Urchin
+                  </a>
                 </div>
-            </article>
-            <article class="title is child notification is-primary">
-                <p class="title">Other Random Facts</p>
-                <p class="subtitile">blah blah</p>
-                <div class="content">
+              </div>
+            </div>
+          </article>
 
-                </div>
-            </article>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-info">
+            <p class="title">Charactor Generation</p>
+
+            <figure>
+              <img src="./assets/Tiefling_5e_Dungeons_and_Dragons_medium.jpg">
+            </figure>
+          </article>
         </div>
 
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-danger">
+          <p class="title name">Name Generator</p>
+          <p class="subtitle name">Other cool things we want to add</p>
+          <div class="content">
+            <!-- Content -->
+          </div>
+        </article>
+      </div>
     </div>
-    <footer>
-        <div class="columns is-multiline is-mobile">
-            <div class="column is-one-quarter">
-                <p> Creators Github Links</p>
-            </div>
-            <div class="column links">
-                <p><a href="https://github.com/Dvangstad">Dvangstad</a>
-                    <a href="https://github.com/MiernickiElijah">MiernickiElijah</a>
-                    <a href="https://github.com/MikeCoyne">MikeCoyne</a>
-                    <a href="#">GithubLink</a>
-                    <a href="#">GithubLink</a>
-                </p>
-            </div>
-        </div>
 
-    </footer>
+    <div class="tile is-parent is-vertical">
+      <article class="title is child notification is-primary">
+        <p class="title">Subclass and Features</p>
+        <p class="subtitle">blah blah</p>
+        <div class="content">
+          <!-- Content-->
+
+        </div>
+      </article>
+      <article class="title is child notification is-primary">
+        <p class="title">Description and Equipment</p>
+        <p class="subtitle">blah blah</p>
+        <div class="content">
+          <!-- Content-->
+
+        </div>
+      </article>
+      <article class="title is child notification is-primary">
+        <p class="title">Personality Traits</p>
+        <p class="subtitle">blah blah</p>
+        <div class="content">
+
+        </div>
+      </article>
+      <article class="title is child notification is-primary">
+        <p class="title">Other Random Facts</p>
+        <p class="subtitile">blah blah</p>
+        <div class="content">
+
+        </div>
+      </article>
+    </div>
+
+  </div>
+  <footer>
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-one-quarter">
+        <p> Creators Github Links</p>
+      </div>
+      <div class="column links">
+        <p><a href="https://github.com/Dvangstad">Dvangstad</a>
+          <a href="https://github.com/MiernickiElijah">MiernickiElijah</a>
+          <a href="https://github.com/MikeCoyne">MikeCoyne</a>
+          <a href="#">GithubLink</a>
+          <a href="#">GithubLink</a>
+        </p>
+      </div>
+    </div>
+
+  </footer>
 </body>
 
 </html>
