@@ -1,0 +1,41 @@
+html {
+    background-color: darkslateblue;
+}
+
+header {
+    font-size: xx-large;
+    font-family: Reggae one;
+    text-align: center;
+    color: ivory;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contacts {
+    color: ivory;
+    font-size: larger;
+}
+
+footer {
+    font-size: larger;
+    color: ivory;
+}
+.column {
+    text-align: end;
+    margin-right: auto;
+    
+    
+}
+
+.name {
+    text-align: center;
+}
+
+a {
+    color: bisque;
+}
+
+img { 
+    height: 100%;
+    width: 50%;
+}
