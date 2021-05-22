@@ -1,16 +1,18 @@
+//global variables//
 var getClass = $("#dropdown-menu1 option:selected").text();
 var getRace = $("#dropdown-menu2 option:selected").text();
 var getBackground = $("#dropdown-menu3 option:selected").text();
+var generateBtn = document.querySelector("#generateBtn");
 
-getRandomBackground
-getRandomClass
-getRandomRace
+//need to randomize these variables//
+// getRandomBackground
+// getRandomClass
+// getRandomRace
 
 //fetch class api//
 var getCharacterClass = function (getClass) {
     //if class == Class then randomize//
     var apiUrl = 'https://www.dnd5eapi.co/api/classes/' + getClass;
-    console.log(getClass);
     fetch(apiUrl)
         .then(function (response) {
             if (response.ok) {
@@ -40,20 +42,24 @@ var getCharacterRace = function (getRace) {
 
 //fetch background api//
 var getCharacterBackground = function (getBackground) {
-    //if race == Race then randomize//
+    //if background == Background then randomize//
     var apiUrl = 'https://www.dnd5eapi.co/api/backgrounds/' + getBackground;
     fetch(apiUrl)
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                    //write Class to DOM//
+                    //write background to DOM//
                     $("").text(data);
                 });
             }
         });
 };
 
-//run functions on dropdown menu change//
-document.getElementById("dropdown-menu1").onchange = getCharacterClass();
-document.getElementById("dropdown-menu2").onchange = getCharacterRace();
-document.getElementById("dropdown-menu3").onchange = getCharacterBackground();
+//run dropdown menu changes on generate submit//
+var formSubmitHandler = function (event) {
+    event.preventDefault();
+
+    getCharacterClass();
+};
+
+generateBtn.addEventListener('submit', formSubmitHandler);
