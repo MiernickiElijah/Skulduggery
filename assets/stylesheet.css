@@ -44,6 +44,7 @@ a {
 img { 
     height: 100%;
     width: 50%;
+
     padding-left: 0px;
     
 }
@@ -54,4 +55,10 @@ img {
 .notification.is-primary {
     background-color: forestgreen;
     font-family: Shojumaru;
+=======
+}
+
+option {
+    color: black
+
 }
