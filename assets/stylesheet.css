@@ -45,6 +45,10 @@ img {
     height: 100%;
     width: 50%;
 
+<<<<<<< HEAD
+=======
+    padding-left: 0px;
+>>>>>>> 73f869c8829652cebc7c5ca786a202a190b868bb
     
 }
 .title{
@@ -54,4 +58,13 @@ img {
 .notification.is-primary {
     background-color: forestgreen;
     font-family: Shojumaru;
+<<<<<<< HEAD
+=======
+=======
+}
+
+option {
+    color: black
+
+>>>>>>> 73f869c8829652cebc7c5ca786a202a190b868bb
 }
