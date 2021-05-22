@@ -1,8 +1,5 @@
 //global variables//
-var getClass = $("#dropdown-menu1 option:selected").text();
-var getRace = $("#dropdown-menu2 option:selected").text();
-var getBackground = $("#dropdown-menu3 option:selected").text();
-var generateBtn = document.querySelector("#generateBtn");
+const generateBtn = document.querySelector("#generateBtn");
 
 //need to randomize these variables//
 // getRandomBackground
@@ -12,8 +9,8 @@ var generateBtn = document.querySelector("#generateBtn");
 //fetch class api//
 var getCharacterClass = function (getClass) {
     //if class == Class then randomize//
-    var apiUrl = 'https://www.dnd5eapi.co/api/classes/' + getClass;
-    fetch(apiUrl)
+    var apiClassUrl = 'https://www.dnd5eapi.co/api/classes/' + getClass.trim().toLowerCase();
+    fetch(apiClassUrl)
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
@@ -28,8 +25,8 @@ var getCharacterClass = function (getClass) {
 //fetch race api//
 var getCharacterRace = function (getRace) {
     //if race == Race then randomize//
-    var apiUrl = 'https://www.dnd5eapi.co/api/races/' + getRace;
-    fetch(apiUrl)
+    var apiRaceUrl = 'https://www.dnd5eapi.co/api/races/' + getRace.trim().toLowerCase();
+    fetch(apiRaceUrl)
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
@@ -43,8 +40,8 @@ var getCharacterRace = function (getRace) {
 //fetch background api//
 var getCharacterBackground = function (getBackground) {
     //if background == Background then randomize//
-    var apiUrl = 'https://www.dnd5eapi.co/api/backgrounds/' + getBackground;
-    fetch(apiUrl)
+    var apiBackgroundUrl = 'https://www.dnd5eapi.co/api/backgrounds/' + getBackground.trim().toLowerCase();
+    fetch(apiBackgroundUrl)
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
@@ -59,7 +56,14 @@ var getCharacterBackground = function (getBackground) {
 var formSubmitHandler = function (event) {
     event.preventDefault();
 
-    getCharacterClass();
+    const getClass = $("#dropdown-content1 option:selected").val();
+    const getRace = $("#dropdown-content2 option:selected").val();
+    const getBackground = $("#dropdown-content3 option:selected").val();
+    //calling functions on formSubmit//
+    getCharacterClass(getClass);
+    getCharacterRace(getRace);
+    getCharacterBackground(getBackground);
+    console.log(getClass);
 };
 
-generateBtn.addEventListener('submit', formSubmitHandler);
+generateBtn.addEventListener('click', formSubmitHandler);
