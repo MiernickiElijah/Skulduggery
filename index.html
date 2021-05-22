@@ -28,51 +28,47 @@
           <article class="tile is-child notification is-primary">
             <p class="title">Selectors</p>
             <div class="dropdown" id="dropdown1">
-              <div class="dropdown-trigger">
-                <button onclick="javascript:document.querySelector('#dropdown1').classList.toggle('is-active')"
-                  class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                  <span>Class</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                <div class="dropdown-content">
-                  <a href="#" class="dropdown-item">
+              <label class="dropdown-menu" id="dropdown-menu1" role="menu">
+                Class
+              </label>
+                <select class="dropdown-content" id="dropdown-content1">
+                  <option value="class">
+                    Class...
+                  </option>
+                  <option value="barbarian">
                     Barbarian
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="bard">
                     Bard
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="cleric">
                     Cleric
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="druid">
                     Druid
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="fighter">
                     Fighter
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="monk">
                     Monk
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="paladin">
                     Paladin
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="ranger">
                     Ranger
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="rogue">
                     Rogue
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="sorcerer">
                     Sorcerer
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="warlock">
                     Warlock
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="wizard">
                     Wizard
                   </a>
                 </div>
@@ -80,42 +76,38 @@
             </div>
 
             <div class="dropdown" id="dropdown2">
-              <div class="dropdown-trigger">
-                <button onclick="javascript:document.querySelector('#dropdown2').classList.toggle('is-active')"
-                  class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                  <span>Race</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                <div class="dropdown-content">
-                  <a href="#" class="dropdown-item">
+              <label class="dropdown-menu" id="dropdown-menu2" role="menu">
+                Race
+              </label>
+                <select class="dropdown-content" id="dropdown-content2">
+                  <option value="race">
+                    Race...
+                  </option>
+                  <option value="dragonborn">
                     Dragonborn
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="dwarf">
                     Dwarf
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="elf">
                     Elf
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="gnome">
                     Gnome
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="half-elf">
                     Half-Elf
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="halfling">
                     Halfling
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="half-orc">
                     Half-Orc
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="human">
                     Human
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="tiefling">
                     Tiefling
                   </a>
                 </div>
@@ -123,63 +115,80 @@
             </div>
 
             <div class="dropdown" id="dropdown3">
-              <div class="dropdown-trigger">
-                <button onclick="javascript:document.querySelector('#dropdown3').classList.toggle('is-active')"
-                  class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                  <span>Background</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                  </span>
-                </button>
-              </div>
-              <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                <div class="dropdown-content">
-                  <a href="#" class="dropdown-item">
+              <label class="dropdown-menu" id="dropdown-menu3" role="menu">
+                Background
+              </label>
+                <select class="dropdown-content" id="dropdown-content3">
+                  <option value="background">
+                    Background...
+                  </option>
+                  <option value="acolyte">
                     Acolyte
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="charlatan">
                     Charlatan
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="criminal">
                     Criminal/Spy
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="entertainer">
                     Entertainer
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="folk-hero">
                     Folk Hero
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="gladiator">
                     Gladiator
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="guild-artisan">
                     Guild Artisan
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="hermit">
                     Hermit
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="noble">
                     Noble
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="outlander">
                     Outlander
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="sage">
                     Sage
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="sailor">
                     Sailor
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="soldier">
                     Soldier
-                  </a>
-                  <a href="#" class="dropdown-item">
+                  </option>
+                  <option value="urchin">
                     Urchin
                   </a>
                 </div>
               </div>
             </div>
+
+            <div class="dropdown" id="dropdown4">
+              <label class="dropdown-menu" id="dropdown-menu4" role="menu">
+                Gender
+              </label>
+                <select class="dropdown-content" id="dropdown-content4">
+                  <option value=gender>
+                    Gender...
+                  </option>
+                  <option value="male">
+                    Male
+                  </option>
+                  <option value="female">
+                    Female
+                  </option>
+                  <option value="they">
+                    They
+                  </option>
+                </select>
+            </div>
           </article>
+          <input type="submit" id="generateBtn" value="GENERATE!">
         </div>
 
         <div class="tile is-parent">
@@ -258,7 +267,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="assets\javascript.js"></script>
 </body>
 
 </html>
