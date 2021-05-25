@@ -70,3 +70,8 @@ option {
     border-radius: 10px;
     font-size: larger;
 }
+
+.content {
+font-family: fantasy;
+font-size: 28px;
+}
