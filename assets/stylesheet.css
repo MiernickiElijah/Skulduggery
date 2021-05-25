@@ -60,3 +60,13 @@ option {
     color: black
 
 }
+
+#generateBtn {
+    font-family: MedievalSharp;
+    padding: 10px;
+    color: white;
+    background-color: #C19A6B;
+    border-color: black;
+    border-radius: 10px;
+    font-size: larger;
+}

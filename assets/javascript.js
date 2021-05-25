@@ -50,17 +50,22 @@ var getCharacterBackground = function (getBackground) {
         getBackground = randO("#dropdown-content3")
     };
     //if background == Background then randomize//
-    var apiBackgroundUrl = 'https://www.dnd5eapi.co/api/backgrounds/' + getBackground.trim().toLowerCase();
-    fetch(apiBackgroundUrl)
-        .then(function (response) {
-            if (response.ok) {
-                response.json().then(function (data) {
-                    console.log(data)
-                    //write background to DOM//
-                    $("").text(data);
-                });
-            }
-        });
+    // var apiBackgroundUrl = 'https://www.dnd5eapi.co/api/backgrounds/' + getBackground.trim().toLowerCase();
+    // fetch(apiBackgroundUrl)
+    //     .then(function (response) {
+    //         if (response.ok) {
+    //             response.json().then(function (data) {
+    //                 console.log(data)
+    //                 //write background to DOM//
+    //                 $("").text(data);
+    //             });
+    //         }
+    //     });
+    var select = document.getElementById('dropdown-content3');
+    var items = select.getElementsByTagName('option');
+    var index = Math.floor(Math.random() * items.length);
+        select.selectedIndex = index;
+    console.log(getBackground);
 };
 
 //helper function for randomizing dropdowns//
