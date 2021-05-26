@@ -44,7 +44,7 @@ var getCharacterRace = function (getRace) {
         });
 };
 
-//fetch background api//
+//fetch background//
 var getCharacterBackground = function (getBackground) {
     if (getBackground === "background") {
         getBackground = randO("#dropdown-content3")
