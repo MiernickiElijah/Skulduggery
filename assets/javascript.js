@@ -1,7 +1,7 @@
 function getName() {
 	const getRace = document.querySelector("#name").getAttribute("value");
 	let raceType = '';
-	if (raceType == 'elf') {
+	if (getRace == 'elf') {
 		raceType = 'elf';
 		//fetch("https://api.fungenerators.com/name/generate.json?category=elf&limit=10")
 		//.then(function (response) {
@@ -30,14 +30,14 @@ function getName() {
 	//     // charName.innerHTML = document.getElementById('name');
 	// })
 
-	fetch('https://api.fungenerators.com/name/generate.json?category=' + raceType + '&limit=10').then(function(
+	fetch('https://api.fungenerators.com/name/generate.json?category=' + raceType + '&limit=50').then(function(
 		response
 	) {
 		response.json().then(function(data) {
 			var names = data.contents.names;
-			console.log(names);
-			var charName = data.contents.names[0];
-			console.log(charName);
+			/////console.log(names);
+			var charName = data.contents.names[Math.floor(Math.random() * names.length)];
+			/////console.log(charName);
 			$('#name').text(charName);
 		});
 		// charName.innerHTML = document.getElementById('name');})
