@@ -65,13 +65,26 @@ option {
     font-family: MedievalSharp;
     padding: 10px;
     color: white;
-    background-color: #C19A6B;
+    background-color: darkred;
     border-color: black;
     border-radius: 10px;
-    font-size: larger;
+    font-size: x-large;
 }
 
 .content {
 font-family: fantasy;
 font-size: 28px;
+}
+
+.dropdown-content{
+    background: darkseagreen;
+    border-radius: 40%;
+    font-family: MedievalSharp;
+    font-weight: bold;
+}
+
+.name {
+    font-family: Shojumaru;
+
+
 }
