@@ -1,10 +1,11 @@
 //global variables//
 const generateBtn = document.querySelector("#generateBtn");
 
-//need to randomize these variables//
-// getRandomBackground
-// getRandomClass
-// getRandomRace
+//this needs to be filled out//
+const characterClassDescription = [];
+
+
+
 
 //fetch class api//
 var getCharacterClass = function (getClass) {
@@ -19,7 +20,12 @@ var getCharacterClass = function (getClass) {
                 response.json().then(function (data) {
                     console.log(data);
                     //write Class to DOM//
-                    $(".classInfo").text(data.name);
+                    $("#classInfo").text(data.name);
+                    //write race Age to Dom//
+                    var dataAge = $("<p>");
+                    dataAge.addClass("raceContent")
+                    dataAge.text(data.age);
+                    $("#raceInfo").append(dataAge);
                 });
             }
         });
@@ -37,8 +43,18 @@ var getCharacterRace = function (getRace) {
             if (response.ok) {
                 response.json().then(function (data) {
                     console.log(data)
-                    //write Class to DOM//
-                    $(".raceInfo").text(data.name);
+                    //write race Name to DOM//
+                    $("#raceInfo").text(data.name);
+                    //write race Age to Dom//
+                    var dataAge = $("<p>");
+                    dataAge.addClass("raceContent")
+                    dataAge.text(data.age);
+                    $("#raceInfo").append(dataAge);
+                    //wrtie race size to Dom//
+                    var dataSize = $("<p>");
+                    dataSize.addClass("raceContent")
+                    dataSize.text(data.size_description);
+                    $("#raceInfo").append(dataSize);
                 });
             }
         });
@@ -49,13 +65,16 @@ var getCharacterBackground = function (getBackground) {
     if (getBackground === "background") {
         getBackground = randO("#dropdown-content3")
     };
-    var select = document.getElementById('dropdown-content3');
-    var items = select.getElementsByTagName('option');
-    var index = Math.floor(Math.random() * items.length);
-    select.selectedIndex = index;
     console.log(getBackground);
-    $(".backgroundInfo").text(getBackground);
+    //write background to dom//
+    $("#backgroundInfo").text(getBackground);
 };
+
+//find out how to pull background description//
+
+// var backgroundDescription = $('select.dropdown-content3').find(':selected').attr('description');
+// $('.dropdown-content3').val(backgroundDescription);
+
 
 //helper function for randomizing dropdowns//
 var randO = function (classing) {
