@@ -4,13 +4,10 @@ const generateBtn = document.querySelector("#generateBtn");
 //this needs to be filled out//
 const characterClassDescription = [];
 
-
-
-
 //fetch class api//
 var getCharacterClass = function (getClass) {
     if (getClass === "class") {
-        getClass = randO("#dropdown-content1")
+        getClass = randO("#dropdown-content1").value
     };
     //if class == Class then randomize//
     var apiClassUrl = 'https://www.dnd5eapi.co/api/classes/' + getClass.trim().toLowerCase();
@@ -34,7 +31,7 @@ var getCharacterClass = function (getClass) {
 //fetch race api//
 var getCharacterRace = function (getRace) {
     if (getRace === "race") {
-        getRace = randO("#dropdown-content2")
+        getRace = randO("#dropdown-content2").value
     };
     //if race == Race then randomize//
     var apiRaceUrl = 'https://www.dnd5eapi.co/api/races/' + getRace.trim().toLowerCase();
@@ -66,21 +63,20 @@ var getCharacterBackground = function (getBackground) {
         getBackground = randO("#dropdown-content3")
     };
     console.log(getBackground);
-    //write background to dom//
-    $("#backgroundInfo").text(getBackground);
+    //write background title to dom//
+    $("#backgroundInfo").text(getBackground.value);
+    //write backg
+    var backgroundInfoDiv = $('<p>');
+    backgroundInfoDiv.addClass('backgroundContent')
+    backgroundInfoDiv.text(getBackground.dataset.description);
+    $("#backgroundInfo").append(backgroundInfoDiv);
 };
-
-//find out how to pull background description//
-
-// var backgroundDescription = $('select.dropdown-content3').find(':selected').attr('description');
-// $('.dropdown-content3').val(backgroundDescription);
-
 
 //helper function for randomizing dropdowns//
 var randO = function (classing) {
     const select = document.querySelector(classing);
     const toget = Math.random() * (select.options.length - 1);
-    return select.options[Math.floor(toget)].value;
+    return select.options[Math.floor(toget)];
 };
 
 //run dropdown menu changes on generate submit//
