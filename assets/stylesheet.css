@@ -69,6 +69,7 @@ option {
     border-color: black;
     border-radius: 10px;
     font-size: x-large;
+    cursor: pointer;
 }
 
 .content {
@@ -81,6 +82,7 @@ font-size: 28px;
     border-radius: 40%;
     font-family: MedievalSharp;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .name {
