@@ -1,35 +1,35 @@
 function getName() {
-	//const getRace = document.querySelector("#getName").getAttribute("value");
-	const getRace = $("#dropdown-content2 option:selected").val();
+    //const getRace = document.querySelector("#getName").getAttribute("value");
+    const getRace = $("#dropdown-content2 option:selected").val();
     //let raceType = '';
-	if (getRace == 'elf') {
-		raceType = 'elf';
-		
-	} else if (getRace == 'dwarf') {
-		raceType = 'dwarf';
+    if (getRace == 'elf') {
+        raceType = 'elf';
 
-	} else if (getRace == 'dragon') {
-		raceType = 'dragon';
-	
-	} else {
-		raceType = 'medieval'; 
+    } else if (getRace == 'dwarf') {
+        raceType = 'dwarf';
 
-	}
-console.log(getRace)
-	fetch('https://api.fungenerators.com/name/generate.json?category=' + raceType + '&limit=50').then(function(response) {
-		response.json().then(function(data) {
-			var names = data.contents.names;
-			//console.log(names);
-			var charName = data.contents.names[Math.floor(Math.random() * names.length)];
-			///console.log(charName);
-			$('#characterTitle').text(charName);
-		});
-		
-	});
+    } else if (getRace == 'dragonborn') {
+        raceType = 'dragon';
+
+    } else {
+        raceType = 'medieval';
+
+    }
+    console.log(getRace)
+    fetch('https://api.fungenerators.com/name/generate.json?category=' + raceType + '&limit=50').then(function (response) {
+        response.json().then(function (data) {
+            var names = data.contents.names;
+            //console.log(names);
+            var charName = data.contents.names[Math.floor(Math.random() * names.length)];
+            ///console.log(charName);
+            $('#characterTitle').text(charName);
+        });
+
+    });
 }
 
-window.onload = function() {
-	document.querySelector('#getName').addEventListener('click', getName);
+window.onload = function () {
+    document.querySelector('#getName').addEventListener('click', getName);
 };
 
 //global variables//

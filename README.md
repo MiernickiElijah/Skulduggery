@@ -15,7 +15,7 @@ Once a character is generated an image is randomized utilizing deviant art API.
 
 Users have an option to save the randomly generated character as a PDF file. 
 
-###link to live page: 
+###link to live page: https://gimbalbyte.github.io/Skulduggery/
 
 
 💡 Notes/references: 
