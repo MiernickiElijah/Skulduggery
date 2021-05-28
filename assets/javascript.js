@@ -7,7 +7,7 @@ function getName() {
 	} else if (getRace == 'dwarf') {
 		raceType = 'dwarf';
 
-	} else if (getRace == 'dragon') {
+	} else if (getRace == 'dragonborn') {
 		raceType = 'dragon';
 	
 	} else {
