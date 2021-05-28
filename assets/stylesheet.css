@@ -90,3 +90,16 @@ font-size: 28px;
 
 
 }
+
+#getName{
+    background-color:blue;
+    border: none;
+    border-radius: 5px;
+    height:100px;
+    width: 80px;
+    color:white;
+    padding: none;
+    text-align: center;
+    display:list-item;
+    font-size: 15px;
+}
