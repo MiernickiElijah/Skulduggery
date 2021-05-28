@@ -92,7 +92,7 @@ font-size: 28px;
 }
 
 #getName{
-    background-color:blue;
+    background-color: darkred;
     border: none;
     border-radius: 5px;
     height:100px;
@@ -102,4 +102,5 @@ font-size: 28px;
     text-align: center;
     display:list-item;
     font-size: 15px;
+    font-family: MedievalSharp;
 }
