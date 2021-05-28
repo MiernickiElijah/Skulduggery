@@ -20,15 +20,21 @@ footer {
     font-size: larger;
     color: ivory;
 }
-.column {
-    text-align: end;
-    margin-right: auto;
-    
-    
+.is-auto {
+    text-align: center;
+    word-spacing: 15px;
 }
+
+.is-one-half {
+    text-align: center;
+    font-family: 'Press Start 2P';
+}
+    
+
 
 .name {
     text-align: center;
+    font-family: fantasy;
 }
 
 a {
@@ -38,4 +44,47 @@ a {
 img { 
     height: 100%;
     width: 50%;
+    padding-left: 0px;
+    
+}
+.title{
+    text-align: center;
+}
+
+.notification.is-primary {
+    background-color: forestgreen;
+    font-family: Shojumaru;
+}
+
+option {
+    color: black
+
+}
+
+#generateBtn {
+    font-family: MedievalSharp;
+    padding: 10px;
+    color: white;
+    background-color: darkred;
+    border-color: black;
+    border-radius: 10px;
+    font-size: x-large;
+}
+
+.content {
+font-family: fantasy;
+font-size: 28px;
+}
+
+.dropdown-content{
+    background: darkseagreen;
+    border-radius: 40%;
+    font-family: MedievalSharp;
+    font-weight: bold;
+}
+
+.name {
+    font-family: Shojumaru;
+
+
 }
