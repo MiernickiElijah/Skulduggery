@@ -72,6 +72,15 @@ option {
     cursor: pointer;
 }
 
+#generateBtn:hover {
+    border: 2px solid transparent;
+    background: darkred;
+    transform: scale(1.05);
+    will-change: transform;
+    border-color: black;
+    border-radius: 10px;
+}
+
 .content {
 font-family: fantasy;
 font-size: 28px;
@@ -92,14 +101,24 @@ font-size: 28px;
 }
 
 #getName{
-    background-color:blue;
-    border: none;
+    background-color:darkred;
+    border: 2px solid transparent;
     border-radius: 5px;
+    border-color: black;
     height:100px;
     width: 80px;
     color:white;
-    padding: none;
+    font-family: MedievalSharp;
+    padding: 10px;
     text-align: center;
-    display:list-item;
-    font-size: 15px;
+    font-size: large;
+}
+
+#getName:hover {
+    border: 2px solid transparent;
+    background: darkred;
+    transform: scale(1.05);
+    will-change: transform;
+    border-color: black;
+    border-radius: 10px;
 }
