@@ -101,13 +101,8 @@ font-size: 28px;
 }
 
 #getName{
-<<<<<<< HEAD
     background-color: darkred;
     border: none;
-=======
-    background-color:darkred;
-    border: 2px solid transparent;
->>>>>>> 7999fe7aa2759b5f1afaeda0b3316ac5842695d7
     border-radius: 5px;
     border-color: black;
     height:100px;
@@ -116,20 +111,14 @@ font-size: 28px;
     font-family: MedievalSharp;
     padding: 10px;
     text-align: center;
-<<<<<<< HEAD
     display:list-item;
     font-size: 15px;
     font-family: MedievalSharp;
-=======
-    font-size: large;
 }
 
-#getName:hover {
-    border: 2px solid transparent;
-    background: darkred;
-    transform: scale(1.05);
-    will-change: transform;
-    border-color: black;
-    border-radius: 10px;
->>>>>>> 7999fe7aa2759b5f1afaeda0b3316ac5842695d7
+.traits {
+    text-align: center;
+    font-family: fantasy;
+    font-size: x-large;
+
 }

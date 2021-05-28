@@ -34,9 +34,11 @@ window.onload = function () {
 
 //global variables//
 const generateBtn = document.querySelector("#generateBtn");
+const personalityParagraph = document.querySelector("#randomTraits")
 
 //this needs to be filled out//
 const characterClassDescription = [];
+var arrayOfPersonality; 
 
 //fetch class api//
 var getCharacterClass = function (getClass) {
@@ -123,6 +125,19 @@ var randO = function (classing) {
     return select.options[Math.floor(toget)];
 };
 
+function getPersonality () {
+    arrayOfPersonality = ["Mysterious", "Charming", "Cheerful", "Stubborn", "Optimistic", "Adventurous", "Kindly", "Independent", "Eccentric", "Unkind", "Overbearing", "Sensitive", "Has major problems with authority", "Enjoys drinking to much mead in their free time",]
+    var resultArr = []
+    for(i=0; i<3; i++){
+        var randomNumber = Math.floor(Math.random()* arrayOfPersonality.length)
+        console.log(randomNumber)
+        resultArr.push(arrayOfPersonality[randomNumber])
+        arrayOfPersonality.splice(randomNumber, 1)
+    }
+    console.log(resultArr)
+    document.getElementById("randomTraits").textContent = resultArr[0] + ", " + resultArr[1] + " and " + resultArr[2]
+}
+
 //run dropdown menu changes on generate submit//
 var formSubmitHandler = function (event) {
     event.preventDefault();
@@ -138,6 +153,9 @@ var formSubmitHandler = function (event) {
     getFunFacts();
 
     getName(getRace);
+
+    getPersonality();
+
 
 };
 
