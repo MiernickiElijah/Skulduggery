@@ -101,8 +101,8 @@ font-size: 28px;
 }
 
 #getName{
-    background-color:darkred;
-    border: 2px solid transparent;
+    background-color: darkred;
+    border: none;
     border-radius: 5px;
     border-color: black;
     height:100px;
@@ -111,14 +111,14 @@ font-size: 28px;
     font-family: MedievalSharp;
     padding: 10px;
     text-align: center;
-    font-size: large;
+    display:list-item;
+    font-size: 15px;
+    font-family: MedievalSharp;
 }
 
-#getName:hover {
-    border: 2px solid transparent;
-    background: darkred;
-    transform: scale(1.05);
-    will-change: transform;
-    border-color: black;
-    border-radius: 10px;
+.traits {
+    text-align: center;
+    font-family: fantasy;
+    font-size: x-large;
+
 }
