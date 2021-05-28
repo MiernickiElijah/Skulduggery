@@ -1,6 +1,7 @@
 function getName() {
-	const getRace = document.querySelector("#name").getAttribute("value");
-	let raceType = '';
+	//const getRace = document.querySelector("#getName").getAttribute("value");
+	const getRace = $("#dropdown-content2 option:selected").val();
+    //let raceType = '';
 	if (getRace == 'elf') {
 		raceType = 'elf';
 		
@@ -14,14 +15,14 @@ function getName() {
 		raceType = 'medieval'; 
 
 	}
-
+console.log(getRace)
 	fetch('https://api.fungenerators.com/name/generate.json?category=' + raceType + '&limit=50').then(function(response) {
 		response.json().then(function(data) {
 			var names = data.contents.names;
-			///console.log(names);
+			//console.log(names);
 			var charName = data.contents.names[Math.floor(Math.random() * names.length)];
 			///console.log(charName);
-			$('#name').text(charName);
+			$('#characterTitle').text(charName);
 		});
 		
 	});
@@ -133,7 +134,11 @@ var formSubmitHandler = function (event) {
     getCharacterClass(getClass);
     getCharacterRace(getRace);
     getCharacterBackground(getBackground);
+
     getFunFacts();
+
+    getName(getRace);
+
 };
 
 generateBtn.addEventListener('click', formSubmitHandler);
