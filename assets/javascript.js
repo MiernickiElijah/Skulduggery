@@ -34,9 +34,11 @@ window.onload = function () {
 
 //global variables//
 const generateBtn = document.querySelector("#generateBtn");
+const personalityParagraph = document.querySelector("#randomTraits")
 
 //this needs to be filled out//
 const characterClassDescription = [];
+var arrayOfPersonality; 
 
 //fetch class api//
 var getCharacterClass = function (getClass) {
@@ -101,12 +103,35 @@ var getCharacterBackground = function (getBackground) {
     $("#backgroundInfo").append(backgroundInfoDiv);
 };
 
+var getFunFacts = function () {
+    let funFacts = ["Cannot tolerate the presence of cheese.", "Is cursed with red/white color blindness.", "Has a crippling fear of sheep.", "Sneezes every time a nearby creature uses divine power.", "Is irrationally paranoid when everyone agrees with them, immediately backtracking to disagree with themselves.", "Cannot tie shoe laces. ONLY shoe laces, every other knotted thread is fine.", "Upon touching a weapon of any sort the weapon immediately bursts into flames and turns to ash.", "Passes out at the sight of orange juice.", "Fervently disbelieves dragons exist and will go so far as to prove the dragon is a very powerful series of damage and illusion spells. Cannot be convinced otherwise.", "Easily distracted by cup cakes.", "Has a small bladder.", "Illiterate but wise enough to figure out things by context and social cues.", "Believes they are safe NO MATTER WHAT as long as someone ties a rope to them.", "Physically unable to speak without rapping.", "Narrates own thoughts.", "Afraid of heights.", "Has the memory of a goldfish and must constantly take notes to keep track of past events.", "Fascination with shiny things.", "Enjoys making up unbelievably over-the-top tales of past conquests.", "Afraid of sleeping alone. Crawls into the bunks of comrades after they are asleep.", "Character has terrible sense of direction and gets lost frequently.", "When the character gets nervous, they tends to repeat the same phrases over and over again.", "Character likes to ease tension with bad puns and jokes."]
+
+    var randomFact = funFacts[Math.floor(Math.random()*funFacts.length)];
+
+    console.log( );
+
+    $(".randomInfo").text(randomFact);
+}
+
 //helper function for randomizing dropdowns//
 var randO = function (classing) {
     const select = document.querySelector(classing);
     const toget = Math.random() * (select.options.length - 1);
     return select.options[Math.floor(toget)];
 };
+
+function getPersonality () {
+    arrayOfPersonality = ["Mysterious", "Charming", "Cheerful", "Stubborn", "Optimistic", "Adventurous", "Kindly", "Independent", "Eccentric", "Unkind", "Overbearing", "Sensitive", "Has major problems with authority", "Enjoys drinking to much mead in their free time",]
+    var resultArr = []
+    for(i=0; i<3; i++){
+        var randomNumber = Math.floor(Math.random()* arrayOfPersonality.length)
+        console.log(randomNumber)
+        resultArr.push(arrayOfPersonality[randomNumber])
+        arrayOfPersonality.splice(randomNumber, 1)
+    }
+    console.log(resultArr)
+    document.getElementById("randomTraits").textContent = resultArr[0] + ", " + resultArr[1] + " and " + resultArr[2]
+}
 
 //run dropdown menu changes on generate submit//
 var formSubmitHandler = function (event) {
@@ -119,7 +144,14 @@ var formSubmitHandler = function (event) {
     getCharacterClass(getClass);
     getCharacterRace(getRace);
     getCharacterBackground(getBackground);
+
+    getFunFacts();
+
     getName(getRace);
+
+    getPersonality();
+
+
 };
 
 generateBtn.addEventListener('click', formSubmitHandler);
