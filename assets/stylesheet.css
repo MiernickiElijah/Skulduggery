@@ -121,3 +121,13 @@ font-size: 28px;
     border-color: black;
     border-radius: 10px;
 }
+
+.raceContent {
+font-size: 25px;
+font-weight: 300;
+}
+
+.backgroundContent {
+    font-size: 25px;
+font-weight: 300;
+}
