@@ -96,8 +96,6 @@ font-size: 28px;
 
 .name {
     font-family: Shojumaru;
-
-
 }
 
 #getName{
@@ -124,21 +122,25 @@ font-size: 28px;
 }
 
 .raceContent {
-font-size: 25px;
-font-weight: 300;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: MedievalSharp;
 }
 
 .backgroundContent {
     font-size: 25px;
-    font-weight: 300;display:list-item;
-    font-size: 15px;
+    font-weight: 300;
     font-family: MedievalSharp;
 }
 
 .traits {
-    text-align: center;
-    font-family: fantasy;
-    font-size: x-large;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: MedievalSharp;
+}
 
-
+.randomInfo {
+    font-size: 25px;
+    font-weight: 300;
+    font-family: MedievalSharp;
 }
