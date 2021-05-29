@@ -121,7 +121,7 @@ var randO = function (classing) {
 };
 
 function getPersonality () {
-    arrayOfPersonality = ["Mysterious", "Charming", "Cheerful", "Stubborn", "Optimistic", "Adventurous", "Kindly", "Independent", "Eccentric", "Unkind", "Overbearing", "Sensitive", "Has major problems with authority", "Enjoys drinking to much mead in their free time",]
+    arrayOfPersonality = ["Mysterious", "Charming", "Cheerful", "Stubborn", "Optimistic", "Adventurous", "Kindly", "Independent", "Eccentric", "Unkind", "Overbearing", "Sensitive", "Has major problems with authority", "Enjoys drinking to much mead in their free time", "Has a severe allergy to be stings",]
     var resultArr = []
     for(i=0; i<3; i++){
         var randomNumber = Math.floor(Math.random()* arrayOfPersonality.length)
