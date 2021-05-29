@@ -105,13 +105,12 @@ font-size: 28px;
     border: 2px solid transparent;
     border-radius: 5px;
     border-color: black;
-    height:100px;
-    width: 80px;
     color:white;
     font-family: MedievalSharp;
     padding: 10px;
     text-align: center;
     font-size: large;
+    width: auto;
 }
 
 #getName:hover {
