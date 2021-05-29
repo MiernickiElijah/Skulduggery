@@ -2,7 +2,7 @@
 This is a random character generator for 5th edition dungeons and dragons. 
 
 ##Image
-[screenshot](pathway once completed)
+[screenshot](assets\images\screenshot.png)
 
 ###Specifications
 User can select a multitude of options to either generator or have fixed. 
