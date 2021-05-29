@@ -105,13 +105,32 @@ font-size: 28px;
     border: none;
     border-radius: 5px;
     border-color: black;
-    height:100px;
-    width: 80px;
     color:white;
     font-family: MedievalSharp;
     padding: 10px;
     text-align: center;
-    display:list-item;
+
+    font-size: large;
+    width: auto;
+}
+
+#getName:hover {
+    border: 2px solid transparent;
+    background: darkred;
+    transform: scale(1.05);
+    will-change: transform;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.raceContent {
+font-size: 25px;
+font-weight: 300;
+}
+
+.backgroundContent {
+    font-size: 25px;
+    font-weight: 300;display:list-item;
     font-size: 15px;
     font-family: MedievalSharp;
 }
@@ -120,5 +139,6 @@ font-size: 28px;
     text-align: center;
     font-family: fantasy;
     font-size: x-large;
+
 
 }

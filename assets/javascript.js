@@ -54,11 +54,6 @@ var getCharacterClass = function (getClass) {
                     console.log(data);
                     //write Class to DOM//
                     $("#classInfo").text(data.name);
-                    //write race Age to Dom//
-                    var dataAge = $("<p>");
-                    dataAge.addClass("raceContent")
-                    dataAge.text(data.age);
-                    $("#raceInfo").append(dataAge);
                 });
             }
         });
@@ -83,7 +78,7 @@ var getCharacterRace = function (getRace) {
                     dataAge.addClass("raceContent")
                     dataAge.text(data.age);
                     $("#raceInfo").append(dataAge);
-                    //wrtie race size to Dom//
+                    //write race size to Dom//
                     var dataSize = $("<p>");
                     dataSize.addClass("raceContent")
                     dataSize.text(data.size_description);
