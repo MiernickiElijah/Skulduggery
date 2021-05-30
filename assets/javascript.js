@@ -133,6 +133,13 @@ function getPersonality () {
     document.getElementById("randomTraits").textContent = resultArr[0] + ", " + resultArr[1] + " and " + resultArr[2]
 }
 
+//get images//
+function getRandomImage() {
+    let images = new Array("assets/images/femaletiefling.jpg", "assets/images/1.jpg", "assets/images/2.jpg", "assets/images/3.jpg", "assets/images/4.jpg", "assets/images/5.jpg", "assets/images/6.jpg", "assets/images/7.jpg", "assets/images/8.jpg", "assets/images/9.jpg", "assets/images/10.jpg", "assets/images/11.jpg", "assets/images/12.jpg", "assets/images/13.jpg", "assets/images/14.jpg", "assets/images/15.jpg", "assets/images/16.jpg", "assets/images/17.jpg", "assets/images/18.jpg", "assets/images/19.jpg", "assets/images/20.jpg", "assets/images/21.jpg", "assets/images/22.jpg", "assets/images/23.jpg");
+    let random_index = Math.floor(Math.random() * images.length);
+    document.getElementById('image').src = images[random_index];
+}
+
 //run dropdown menu changes on generate submit//
 var formSubmitHandler = function (event) {
     event.preventDefault();
@@ -144,14 +151,10 @@ var formSubmitHandler = function (event) {
     getCharacterClass(getClass);
     getCharacterRace(getRace);
     getCharacterBackground(getBackground);
-
     getFunFacts();
-
     getName(getRace);
-
     getPersonality();
-
-
+    getRandomImage();
 };
 
 generateBtn.addEventListener('click', formSubmitHandler);
