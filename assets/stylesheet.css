@@ -1,24 +1,33 @@
 html {
-    background-color: darkslateblue;
+ background-image: linear-gradient(to right top, #240b36, #291e4c, #2b3162, #2a4578, #27598c, #1a6b9c, #077ea9, #0090b4, #00a4b2, #00b596, #35c165, #95c623);
+padding: 5px;
+}
+
+:root{
+--alabaster: #f4f3ee;
+--YG: #95c623;
+--starcommand:#2274a5;
+--flame:#eb6534;
+--russian:#240b36;
 }
 
 header {
     font-size: xx-large;
     font-family: Reggae one;
     text-align: center;
-    color: ivory;
+    color: var(--alabaster);
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .contacts {
-    color: ivory;
+    color: var(--alabaster);
     font-size: larger;
 }
 
 footer {
     font-size: larger;
-    color: ivory;
+    color: var(--alabaster);
 }
 .is-auto {
     text-align: center;
@@ -38,7 +47,10 @@ footer {
 }
 
 a {
-    color: bisque;
+    color:var(--YG);
+}
+a:hover{
+    transform: scale(1.15);
 }
 
 img { 
@@ -52,7 +64,7 @@ img {
 }
 
 .notification.is-primary {
-    background-color: forestgreen;
+    background-color: var(--YG);
     font-family: Shojumaru;
 }
 
@@ -64,8 +76,8 @@ option {
 #generateBtn {
     font-family: MedievalSharp;
     padding: 10px;
-    color: white;
-    background-color: darkred;
+    color: var(--alabaster);
+    background-color:var(--flame);
     border-color: black;
     border-radius: 10px;
     font-size: x-large;
@@ -74,8 +86,8 @@ option {
 
 #generateBtn:hover {
     border: 2px solid transparent;
-    background: darkred;
-    transform: scale(1.05);
+    background:var(--flame);
+    transform: scale(1.01);
     will-change: transform;
     border-color: black;
     border-radius: 10px;
@@ -87,7 +99,7 @@ font-size: 28px;
 }
 
 .dropdown-content{
-    background: darkseagreen;
+    background: var(--flame);
     border-radius: 40%;
     font-family: MedievalSharp;
     font-weight: bold;
@@ -98,12 +110,16 @@ font-size: 28px;
     font-family: Shojumaru;
 }
 
+.profile>.is-info {
+    background-color: var(--starcommand);
+}
+
 #getName{
-    background-color: darkred;
+    background-color:var(--flame);
     border: none;
     border-radius: 5px;
     border-color: black;
-    color:white;
+    color:var(--alabaster);
     font-family: MedievalSharp;
     padding: 10px;
     text-align: center;
@@ -114,7 +130,7 @@ font-size: 28px;
 
 #getName:hover {
     border: 2px solid transparent;
-    background: darkred;
+    background:var(--flame);
     transform: scale(1.05);
     will-change: transform;
     border-color: black;
@@ -144,4 +160,8 @@ font-size: 28px;
     font-size: 25px;
     font-weight: 300;
     font-family: MedievalSharp;
+}
+
+.bigInfo > .is-danger{
+    background-color: var(--russian);
 }
