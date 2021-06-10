@@ -10,7 +10,6 @@ function getName() {
     } else {
         raceType = 'medieval';
     }
-    console.log(getRace)
     fetch('https://api.fungenerators.com/name/generate.json?category=' + raceType + '&limit=50').then(function (response) {
         response.json().then(function (data) {
             var names = data.contents.names;
@@ -64,7 +63,6 @@ var getCharacterRace = function (getRace) {
         .then(function (response) {
             if (response.ok) {
                 response.json().then(function (data) {
-                    console.log(data)
                     //write race Name to DOM//
                     $("#raceInfo").text(data.name);
                     //write race Age to Dom//
@@ -118,7 +116,6 @@ function getPersonality() {
     var resultArr = []
     for (i = 0; i < 3; i++) {
         var randomNumber = Math.floor(Math.random() * arrayOfPersonality.length)
-        console.log(randomNumber)
         resultArr.push(arrayOfPersonality[randomNumber])
         arrayOfPersonality.splice(randomNumber, 1)
     }
