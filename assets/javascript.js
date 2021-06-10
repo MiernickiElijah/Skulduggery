@@ -1,19 +1,14 @@
+
 function getName() {
-    //const getRace = document.querySelector("#getName").getAttribute("value");
     const getRace = $("#dropdown-content2 option:selected").val();
-    //let raceType = '';
     if (getRace == 'elf') {
         raceType = 'elf';
-
     } else if (getRace == 'dwarf') {
         raceType = 'dwarf';
-
     } else if (getRace == 'dragonborn') {
         raceType = 'dragon';
-
     } else {
         raceType = 'medieval';
-
     }
     console.log(getRace)
     fetch('https://api.fungenerators.com/name/generate.json?category=' + raceType + '&limit=50').then(function (response) {
@@ -24,7 +19,6 @@ function getName() {
             ///console.log(charName);
             $('#characterTitle').text(charName);
         });
-
     });
 }
 
@@ -93,23 +87,21 @@ var getCharacterBackground = function (getBackground) {
     if (getBackground === "background") {
         getBackground = randO("#dropdown-content3")
     };
-    console.log(getBackground);
-    //write background title to dom//
-    $("#backgroundInfo").text(getBackground.value);
-    //write backg
+    //write background title to DOM//
+    $("#backgroundInfo").text('The ' + getBackground.value);
+    //write background content to DOM//
     var backgroundInfoDiv = $('<p>');
     backgroundInfoDiv.addClass('backgroundContent')
     backgroundInfoDiv.text(getBackground.dataset.description);
     $("#backgroundInfo").append(backgroundInfoDiv);
 };
 
+//random fact generator//
 var getFunFacts = function () {
     let funFacts = ["Cannot tolerate the presence of cheese.", "Is cursed with red/white color blindness.", "Has a crippling fear of sheep.", "Sneezes every time a nearby creature uses divine power.", "Is irrationally paranoid when everyone agrees with them, immediately backtracking to disagree with themselves.", "Cannot tie shoe laces. ONLY shoe laces, every other knotted thread is fine.", "Upon touching a weapon of any sort the weapon immediately bursts into flames and turns to ash.", "Passes out at the sight of orange juice.", "Fervently disbelieves dragons exist and will go so far as to prove the dragon is a very powerful series of damage and illusion spells. Cannot be convinced otherwise.", "Easily distracted by cup cakes.", "Has a small bladder.", "Illiterate but wise enough to figure out things by context and social cues.", "Believes they are safe NO MATTER WHAT as long as someone ties a rope to them.", "Physically unable to speak without rapping.", "Narrates own thoughts.", "Afraid of heights.", "Has the memory of a goldfish and must constantly take notes to keep track of past events.", "Fascination with shiny things.", "Enjoys making up unbelievably over-the-top tales of past conquests.", "Afraid of sleeping alone. Crawls into the bunks of comrades after they are asleep.", "Character has terrible sense of direction and gets lost frequently.", "When the character gets nervous, they tends to repeat the same phrases over and over again.", "Character likes to ease tension with bad puns and jokes."]
-
+    //randomize option//
     var randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
-
-    console.log();
-
+    //write fact to DOM//
     $(".randomInfo").text(randomFact);
 }
 
@@ -120,6 +112,7 @@ var randO = function (classing) {
     return select.options[Math.floor(toget)];
 };
 
+//random personality generator//
 function getPersonality() {
     arrayOfPersonality = ["Mysterious", "Charming", "Cheerful", "Stubborn", "Optimistic", "Adventurous", "Kindly", "Independent", "Eccentric", "Unkind", "Overbearing", "Sensitive", "Has major problems with authority", "Enjoys drinking to much mead in their free time", "Has a severe allergy to be stings",]
     var resultArr = []
@@ -129,7 +122,6 @@ function getPersonality() {
         resultArr.push(arrayOfPersonality[randomNumber])
         arrayOfPersonality.splice(randomNumber, 1)
     }
-    console.log(resultArr)
     document.getElementById("randomTraits").textContent = resultArr[0] + ", " + resultArr[1] + " and " + resultArr[2]
 }
 

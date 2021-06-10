@@ -9,11 +9,13 @@ padding: 5px;
 --starcommand:#2274a5;
 --flame:#eb6534;
 --russian:#240b36;
+--fancyTitle: Reggae one;
+--medieval: var(MedievalSharp)
 }
 
 header {
     font-size: xx-large;
-    font-family: Reggae one;
+    font-family: var(--fancyTitle);
     text-align: center;
     color: var(--alabaster);
     padding-top: 20px;
@@ -40,10 +42,9 @@ footer {
 }
     
 
-
 .name {
     text-align: center;
-    font-family: fantasy;
+    font-family: var(--medieval);
 }
 
 a {
@@ -65,7 +66,7 @@ img {
 
 .notification.is-primary {
     background-color: var(--YG);
-    font-family: Shojumaru;
+    font-family: var(--medieval);
 }
 
 option {
@@ -94,7 +95,7 @@ option {
 }
 
 .content {
-font-family: fantasy;
+font-family: var(--medieval);
 font-size: 28px;
 }
 
@@ -107,7 +108,7 @@ font-size: 28px;
 }
 
 .name {
-    font-family: Shojumaru;
+    font-family: var(--medieval);
 }
 
 .profile>.is-info {
